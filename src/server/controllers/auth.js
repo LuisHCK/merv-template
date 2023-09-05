@@ -29,7 +29,7 @@ export const signIn = async (req, res) => {
             user
         })
     } catch (error) {
-        console.error(error)
+        console.error(error.message)
         return res.status(401).json({ message: 'Invalid username or password' })
     }
 }
